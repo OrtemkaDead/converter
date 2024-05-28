@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Конвертер валют</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="converter-body">
+    <div class="converter">
+      <header class="converter__header">
+        <h1 class="converter__title">Конвертер валют</h1>
+      </header>
+
+      <div class="converter__content">
+        <label class="converter__label">
+          <div class="converter__current-currency"></div>
+          <input
+            type="number"
+            class="converter__input"
+            id="fromAmount"
+            value="1"
+          />
+        </label>
+
+        <div class="converter__selects-wrapper">
+          <select class="converter__select" id="fromCurrency">
+            <option value="BTC" selected>BTC - Биткоин</option>
+            <option value="RUB">RUB - рубля</option>
+            <option value="XYU">XYU - юань</option>
+          </select>
+
+          <button
+            type="button"
+            class="converter__exchange-button"
+            id="exchangeButton"
+          >
+            <svg
+              class="converter__exchange-icon"
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M23 20H7M7 20L11 16M7 20L11 24M7 10H23M23 10L19 6M23 10L19 14"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+
+          <select class="converter__select" id="toCurrency">
+            <option value="BTC">BTC - Биткоин</option>
+            <option value="RUB" selected>RUB - рубля</option>
+            <option value="XYU">XYU - юань</option>
+          </select>
+        </div>
+      </div>
+
+      <footer class="converter__footer">
+        <div class="converter__result">
+          <span class="converter__result-count" id="toAmount"></span>
+          <span class="converter__result-currency"></span>
+        </div>
+
+        <button class="converter__footer-button" type="button">Обменять</button>
+      </footer>
+    </div>
+
+    <script src="./scripts.js"></script>
+  </body>
+</html>
